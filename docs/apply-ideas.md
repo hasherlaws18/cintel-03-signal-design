@@ -29,8 +29,6 @@ Questions to explore:
 - Which signals best indicate system health?
 - Are raw counts or derived signals easier to interpret?
 
-
-
 ### Retail Sales
 
 Possible fields:
@@ -49,8 +47,6 @@ Questions to explore:
 - What signals indicate strong or weak performance?
 - Which signals help compare days with different traffic levels?
 
-
-
 ### Fitness Tracker Data
 
 Possible fields:
@@ -68,8 +64,6 @@ Questions to explore:
 
 - Which signals reveal intensity of activity?
 - Do derived metrics change how behavior appears?
-
-
 
 ### Environmental Monitoring
 

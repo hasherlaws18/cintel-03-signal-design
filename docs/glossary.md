@@ -1,40 +1,77 @@
 # Glossary
 
-In this first module, we focus only on:
+## Quick Lookup
 
-- **Detect deviations in a static dataset using clearly defined domain rules.**
+Common terms used in this module:
 
-## Anomaly
+- **Signal** - a derived metric created from raw data
+- **Raw Metric** - a directly recorded measurement from a system
+- **Derived Metric** - a value calculated from one or more raw metrics
+- **Error Rate** - proportion of errors relative to total requests
+- **Latency** - the time required for a system to respond to a request
+- **Throughput** - the volume of work processed by a system (for example, number of requests)
 
-An **anomaly** is a value that:
+## Raw Metric
 
-- Falls outside the expected or reasonable range for a given context, and/or
-- Violates the domain rules defined.
+A measurement recorded directly from a system. Examples:
 
-Important:
+- number of requests
+- number of errors
+- total latency
 
-An anomaly is not universal.
-It depends on **assumptions, context, and domain knowledge**.
+Raw metrics describe what happened but may not be the easiest values to interpret.
 
-Sometimes we have real-world information about reasonable thresholds for:
+## Signal
 
-- Age in years for humans
-- Age in years for human children
-- Age in years for dogs
-- Age in years for cats
-- Age in years for tortoises
-- Height in inches for humans
-- Height in inches for human children
-- Height in inches for dogs
-- Height in inches for cats
-- Height in inches for tortoises
+A **signal** is a **derived metric** designed to make system behavior easier to understand.
+Signals are usually created by combining or transforming raw metrics.
+Examples:
 
-## Understanding Comes First
+- error rate
+- average latency per request
+- throughput
 
-Continuous Intelligence does not begin with complex models.
+Signals help analysts monitor system health and detect unusual behavior.
 
-It begins with clarity and experience:
+### Error Rate
 
-- What do we expect?
-- What violates that expectation?
-- How do we detect and document it?
+The proportion of failed requests relative to total requests.
+This signal helps identify **reliability problems** in a system.
+
+```
+error_rate = errors / requests
+```
+
+### Latency
+
+The **time required** for a system to respond to a request.
+In this module, we often compute **average latency per request**:
+
+```
+avg_latency = total_latency_ms / requests
+```
+
+### Throughput
+
+The **amount of work processed** by a system in a given observation period.
+Examples include:
+
+- requests handled
+- transactions processed
+- messages delivered
+
+## Feature Engineering
+
+The process of creating new variables (features or signals) from existing data.
+**Signal design is a form of feature engineering** for monitoring systems.
+Feature engineering often includes:
+
+- ratios (errors / requests)
+- averages (latency per request)
+- aggregations (rolling means)
+- transformations (log, scaling, normalization)
+
+## Signal Design
+
+The process of creating useful signals from raw system metrics.
+Well-designed signals make system behavior easier to monitor and interpret, which is essential for **continuous intelligence systems**.

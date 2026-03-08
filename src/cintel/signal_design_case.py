@@ -2,7 +2,7 @@
 signal_design_case.py - Project script (example).
 
 Author: Denise Case
-Date: 2026-02
+Date: 2026-03
 
 System Metrics Data
 
