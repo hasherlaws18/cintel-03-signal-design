@@ -65,6 +65,9 @@ Sometimes instructions may not quite match your operating system.
 When issues occur, share screenshots, error messages, and details about what you tried.
 Working through issues is part of implementing professional projects.
 
+## Change
+Made a change to make the error rate and average_latency_ms easier to read by making them round up.
+
 ## Success
 
 After completing Phase 1. **Start & Run**, you'll have your own GitHub project,
